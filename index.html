@@ -37,7 +37,69 @@
 .footer{padding:65px 20px;text-align:center;background:var(--wine);color:#f8eadd}.footer .script{font-size:3.6rem;color:#f1d7ac}.footer p{font-size:.75rem;line-height:1.8;color:#ead4c9}.footer .ornament{margin:18px 0;color:#e3c38c}
 @media(max-width:650px){.hero{padding:24px 8px 34px}.ganesha{width:112px;height:112px;margin-bottom:0}.ganesha svg{width:96px;height:96px}.heart-wrap{min-height:700px;width:100%}.heart-inner{padding:165px 26px 125px;max-width:520px}.names{font-size:clamp(2.15rem,8.7vw,3.5rem)}.hero .eyebrow{font-size:.57rem;letter-spacing:.16em}.hero-sub{font-size:1.05rem;letter-spacing:.12em}.hero-date{font-size:.62rem;letter-spacing:.13em}.scroll{margin-top:22px}.section{padding:68px 18px}.event-grid{grid-template-columns:1fr;max-width:420px}.family-grid{grid-template-columns:1fr;gap:8px}.heart{margin:0}.gallery-grid{grid-template-columns:1fr 1fr}.photo-slot:last-child{display:none}}@media(max-width:380px){.heart-wrap{min-height:640px}.heart-inner{padding:150px 18px 110px}.names{font-size:2.05rem}.hero-date{letter-spacing:.08em}}
 </style></head>
-<body>
+<body>    
+
+    <style>
+        .ganesha-invite-header {
+            text-align: center;
+            padding: 20px;
+            font-family: sans-serif;
+        }
+
+        .ganesha-motif {
+            animation: gentleFloat 3.5s ease-in-out infinite;
+            filter: drop-shadow(0 4px 10px rgba(212, 175, 55, 0.25));
+        }
+
+        .halo-spin {
+            transform-origin: 60px 60px;
+            animation: slowSpin 24s linear infinite;
+        }
+
+        .draw-path {
+            stroke-dasharray: 150;
+            stroke-dashoffset: 150;
+            animation: strokeReveal 2s ease-out forwards;
+        }
+
+        .shloka {
+            color: #9A7B2C;
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-top: 8px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in 0.8s forwards;
+        }
+
+        @keyframes strokeReveal {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        @keyframes gentleFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes slowSpin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+
     <header class="hero" id="home">
         <svg xmlns="http://w3.org" viewBox="0 0 800 500" width="100%" height="100%" style="overflow: hidden;;position:absolute">
             <defs>
@@ -263,20 +325,118 @@
 
 
             <div class="ganesha" role="img" aria-label="Lord Ganesha giving blessings, gently animated">
-                <img src="ganeshap.png" alt="Brief description of the image" width="145" height="155">
+                <svg xmlns="http://w3.org" viewBox="0 0 300 340" width="300" height="340">
+                    <defs>
+                        <!-- Soft Champagne-to-Gold Metallic Gradient -->
+                        <linearGradient id="ganeshaGold" x1="15%" y1="10%" x2="85%" y2="90%">
+                            <stop offset="0%" stop-color="#f9e69e" />
+                            <stop offset="35%" stop-color="#e5c158" />
+                            <stop offset="70%" stop-color="#c4942b" />
+                            <stop offset="100%" stop-color="#edd074" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Crown Top Teardrop / Flame Finial -->
+                    <path d="M148 54
+   C138 66, 138 80, 148 82
+   C158 80, 158 66, 148 54 Z"
+                          fill="url(#ganeshaGold)" />
+
+                    <!-- Crown Horizontal Bars -->
+                    <rect x="122" y="86" width="54" height="9" rx="4.5" fill="url(#ganeshaGold)" />
+                    <rect x="122" y="100" width="54" height="9" rx="4.5" fill="url(#ganeshaGold)" />
+
+                    <!-- Left Ear & Upper Trunk Curve -->
+                    <path d="M90 122
+   C104 114, 124 114, 132 132
+   C138 146, 136 164, 148 174
+   C158 182, 174 186, 182 198
+   C170 198, 152 192, 138 182
+   C126 172, 126 154, 122 140
+   C118 128, 108 124, 102 128
+   C106 142, 112 152, 122 158
+   C112 164, 102 156, 96 140
+   C94 132, 92 126, 90 122 Z"
+                          fill="url(#ganeshaGold)" />
+
+                    <!-- Center Tapered Trunk -->
+                    <path d="M134 116
+   L160 116
+   C154 136, 150 156, 162 176
+   C146 172, 138 152, 134 116 Z"
+                          fill="url(#ganeshaGold)" />
+
+                    <!-- Right Ear & Sweeping Lower Trunk Tip -->
+                    <path d="M208 122
+   C194 112, 172 110, 162 128
+   C154 142, 154 162, 168 174
+   C178 182, 188 186, 192 196
+   C194 184, 184 174, 174 166
+   C164 158, 164 142, 170 130
+   C176 120, 188 120, 194 124
+   C190 138, 184 148, 176 156
+   C186 160, 194 150, 200 136
+   C202 130, 205 126, 208 122 Z"
+                          fill="url(#ganeshaGold)" />
+
+                    <!-- Left C-Shaped Accent -->
+                    <path d="M104 162
+   C88 160, 82 180, 94 190
+   C104 196, 114 188, 112 178
+   C108 178, 106 184, 100 184
+   C92 184, 90 170, 100 168
+   C103 167, 104 164, 104 162 Z"
+                          fill="url(#ganeshaGold)" />
+
+                    <!-- Right Dot & Crescent (Chandrabindu Accent) -->
+                    <circle cx="204" cy="172" r="5.5" fill="url(#ganeshaGold)" />
+                    <path d="M192 178
+   C196 188, 210 188, 214 178
+   C218 182, 214 194, 203 194
+   C192 194, 188 182, 192 178 Z"
+                          fill="url(#ganeshaGold)" />
+
+                    <!-- Left Lower Curved Leg / Base -->
+                    <path d="M114 202
+   C94 196, 82 212, 92 228
+   C102 242, 122 244, 134 242
+   C124 236, 108 232, 102 222
+   C96 212, 104 206, 116 206
+   C118 204, 116 202, 114 202 Z"
+                          fill="url(#ganeshaGold)" />
+
+                    <!-- Main Flowing Belly & Right Seated Sweep -->
+                    <path d="M128 180
+   C118 190, 118 212, 132 224
+   C148 236, 174 224, 192 218
+   C202 215, 206 226, 194 234
+   C182 242, 166 242, 154 238
+   C172 248, 198 248, 210 232
+   C220 218, 208 202, 190 206
+   C172 210, 154 224, 140 216
+   C128 208, 130 190, 132 182 Z"
+                          fill="url(#ganeshaGold)" />
+
+                    <!-- Bottom Lotus Petal Accents -->
+                    <path d="M138 234 C146 240, 146 252, 136 256 C132 256, 130 252, 134 248 C138 244, 138 238, 138 234 Z" fill="url(#ganeshaGold)" />
+                    <path d="M148 250 C158 254, 160 268, 150 278 C150 268, 146 260, 142 256 C142 252, 145 250, 148 250 Z" fill="url(#ganeshaGold)" />
+                    <path d="M158 248 C168 250, 170 264, 160 272 C160 264, 158 256, 154 252 C154 249, 156 248, 158 248 Z" fill="url(#ganeshaGold)" />
+                </svg>
+                <!--<img src="ganeshap.png" alt="Brief description of the image" width="145" height="155">-->
             </div>
             <div class="heart-wrap">
-                 <div class="heart-inner"><p class="eyebrow">Together with the blessings of our families</p><h1 class="names"><span class="name-line">Tejaswini <span class="initial">V</span></span><span class="amp">&amp;</span><span class="name-line">Abhishek <span class="initial">G</span></span></h1><div class="divider">❦</div><p class="hero-sub">WE ARE GETTING MARRIED</p><p class="hero-date">December 2 &amp; 3, 2026 · Bengaluru</p><div class="scroll">Scroll to discover<span>⌄</span></div></div>
+                <div class="heart-inner"><p class="eyebrow">Together with the blessings of our families</p><h1 class="names"><span class="name-line">Tejaswini <span class="initial">V</span></span><span class="amp">&amp;</span><span class="name-line">Abhishek <span class="initial">G</span></span></h1><div class="divider">❦</div><p class="hero-sub">WE ARE GETTING MARRIED</p><p class="hero-date">December 2 &amp; 3, 2026 · Bengaluru</p><div class="scroll">Scroll to discover<span>⌄</span></div></div>
             </div>
         </div>
     </header>
-<section class="section intro"><div class="wrap"><p class="eyebrow">A beautiful beginning</p><h2 class="script">Two hearts, one forever</h2><div class="divider">❦</div><p>With immense joy and the love of our families, we invite you to celebrate the beginning of our forever. Your presence and blessings will make our special days even more meaningful.</p><p class="couple-line">Tejaswini V <span style="color:var(--gold)">♥</span> Abhishek G</p></div></section>
-<section class="countdown"><p class="eyebrow">The celebration begins in</p><h2>Counting down to our forever</h2><div class="timer" id="timer"><div class="time-unit"><strong id="days">--</strong><span>Days</span></div><div class="time-unit"><strong id="hours">--</strong><span>Hours</span></div><div class="time-unit"><strong id="minutes">--</strong><span>Minutes</span></div><div class="time-unit"><strong id="seconds">--</strong><span>Seconds</span></div></div><p class="count-note">Reception · December 2, 2026 at 7:00 PM (IST)</p></section>
-<section class="section events"><div class="wrap"><p class="eyebrow">Save the dates</p><h2>Wedding celebrations</h2><div class="divider">✧</div><div class="event-grid"><article class="event-card"><div class="event-icon">❀</div><h3>Reception</h3><div class="event-date">Wednesday · December 2, 2026</div><div class="event-time">7:00 PM onwards</div><p>An evening of joy, laughter, and togetherness.<br>We look forward to celebrating with you.</p></article><article class="event-card"><div class="event-icon">✧</div><h3>Muhurtham</h3><div class="event-date">Thursday · December 3, 2026</div><div class="event-time">9:30 AM – 10:50 AM</div><p>Join us as we begin our journey together<br>with the blessings of our loved ones.</p></article></div></div></section>
-<section class="section family"><div class="wrap"><p class="eyebrow">Together with our families</p><h2>With love &amp; blessings</h2><div class="family-grid"><div><h3>Abhishek G</h3><p>Son of<br><strong>Smt. Triveni</strong><br>&amp; <strong>Sri Gangadhar</strong></p></div><div class="heart">♥</div><div><h3>Tejaswini V</h3><p>Daughter of<br><strong>Smt. Umadevi K.V.</strong><br>&amp; <strong>Sri Venkatesh R.</strong></p></div></div></div></section>
-<section class="section venue"><div class="wrap"><p class="eyebrow">We would love to see you there</p><h2>Venue</h2><div class="divider">❦</div><div class="venue-name">G M Convention Hall</div><p class="venue-address">#79, Railway Layout 2nd Stage,<br>Near Ullal RTO, Ullal Main Road,<br>Bengaluru – 560056</p><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=G+M+Convention+Hall+%2379+Railway+Layout+2nd+Stage+Near+Ullal+RTO+Ullal+Main+Road+Bengaluru+560056">Open in Google Maps ↗</a></div></section>
+    <section class="section intro"><div class="wrap"><p class="eyebrow">A beautiful beginning</p><h2 class="script">Two hearts, one forever</h2><div class="divider">❦</div><p>With immense joy and the love of our families, we invite you to celebrate the beginning of our forever. Your presence and blessings will make our special days even more meaningful.</p><p class="couple-line">Tejaswini V <span style="color:var(--gold)">♥</span> Abhishek G</p></div></section>
+    <section class="countdown"><p class="eyebrow">The celebration begins in</p><h2>Counting down to our forever</h2><div class="timer" id="timer"><div class="time-unit"><strong id="days">--</strong><span>Days</span></div><div class="time-unit"><strong id="hours">--</strong><span>Hours</span></div><div class="time-unit"><strong id="minutes">--</strong><span>Minutes</span></div><div class="time-unit"><strong id="seconds">--</strong><span>Seconds</span></div></div><p class="count-note">Reception · December 2, 2026 at 7:00 PM (IST)</p></section>
+    <section class="section events"><div class="wrap"><p class="eyebrow">Save the dates</p><h2>Wedding celebrations</h2><div class="divider">✧</div><div class="event-grid"><article class="event-card"><div class="event-icon">❀</div><h3>Reception</h3><div class="event-date">Wednesday · December 2, 2026</div><div class="event-time">7:00 PM onwards</div><p>An evening of joy, laughter, and togetherness.<br>We look forward to celebrating with you.</p></article><article class="event-card"><div class="event-icon">✧</div><h3>Muhurtham</h3><div class="event-date">Thursday · December 3, 2026</div><div class="event-time">9:30 AM – 10:50 AM</div><p>Join us as we begin our journey together<br>with the blessings of our loved ones.</p></article></div></div></section>
+    <section class="section family"><div class="wrap"><p class="eyebrow">Together with our families</p><h2>With love &amp; blessings</h2><div class="family-grid"><div><h3>Abhishek G</h3><p>Son of<br><strong>Smt. Triveni</strong><br>&amp; <strong>Sri Gangadhar</strong></p></div><div class="heart">♥</div><div><h3>Tejaswini V</h3><p>Daughter of<br><strong>Smt. Umadevi K.V.</strong><br>&amp; <strong>Sri Venkatesh R.</strong></p></div></div></div></section>
+    <section class="section venue"><div class="wrap"><p class="eyebrow">We would love to see you there</p><h2>Venue</h2><div class="divider">❦</div><div class="venue-name">G M Convention Hall</div><p class="venue-address">#79, Railway Layout 2nd Stage,<br>Near Ullal RTO, Ullal Main Road,<br>Bengaluru – 560056</p><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=G+M+Convention+Hall+%2379+Railway+Layout+2nd+Stage+Near+Ullal+RTO+Ullal+Main+Road+Bengaluru+560056">Open in Google Maps ↗</a></div></section>
 
-<footer class="footer"><div class="script">Tejaswini <span class="initial">V</span> &amp; Abhishek <span class="initial">G</span></div><div class="ornament">✧ ❦ ✧</div><p>With love, we invite you to share in our joy.<br>Your presence, wishes, and blessings mean the world to us.</p><p>DECEMBER 2 &amp; 3, 2026 · BENGALURU</p></footer>
-<script>
-const target=new Date('2026-12-02T19:00:00+05:30').getTime();function tick(){let diff=target-Date.now();if(diff<0)diff=0;const d=Math.floor(diff/86400000),h=Math.floor(diff%86400000/3600000),m=Math.floor(diff%3600000/60000),s=Math.floor(diff%60000/1000);document.getElementById('days').textContent=d;document.getElementById('hours').textContent=String(h).padStart(2,'0');document.getElementById('minutes').textContent=String(m).padStart(2,'0');document.getElementById('seconds').textContent=String(s).padStart(2,'0')}tick();setInterval(tick,1000);
-</script></body></html>
+    <footer class="footer"><div class="script">Tejaswini <span class="initial">V</span> &amp; Abhishek <span class="initial">G</span></div><div class="ornament">✧ ❦ ✧</div><p>With love, we invite you to share in our joy.<br>Your presence, wishes, and blessings mean the world to us.</p><p>DECEMBER 2 &amp; 3, 2026 · BENGALURU</p></footer>
+    <script>
+        const target = new Date('2026-12-02T19:00:00+05:30').getTime(); function tick() { let diff = target - Date.now(); if (diff < 0) diff = 0; const d = Math.floor(diff / 86400000), h = Math.floor(diff % 86400000 / 3600000), m = Math.floor(diff % 3600000 / 60000), s = Math.floor(diff % 60000 / 1000); document.getElementById('days').textContent = d; document.getElementById('hours').textContent = String(h).padStart(2, '0'); document.getElementById('minutes').textContent = String(m).padStart(2, '0'); document.getElementById('seconds').textContent = String(s).padStart(2, '0') } tick(); setInterval(tick, 1000);
+    </script>
+</body></html>
