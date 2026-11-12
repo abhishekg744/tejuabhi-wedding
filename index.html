@@ -36,7 +36,200 @@
 .gallery{background:var(--ivory)}.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:35px auto;max-width:900px}.photo-slot{aspect-ratio:4/5;border:1px solid rgba(184,154,98,.55);background:linear-gradient(145deg,#e9e0f8,#f8f4ff 55%,#f8e5d8);display:grid;place-items:center;position:relative;overflow:hidden}.photo-slot:nth-child(2){background:linear-gradient(145deg,#eee6fb,#fff8f3 60%,#e6d9f5)}.photo-slot:nth-child(3){background:linear-gradient(145deg,#f7edf9,#eadcf7 60%,#fff3e8)}.photo-slot:before{content:'❧';font:5rem 'Cormorant Garamond',serif;color:rgba(166,107,112,.45)}.photo-slot span{position:absolute;bottom:18px;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:var(--wine)}.gallery-hint{font-size:.75rem;color:var(--muted)}
 .footer{padding:65px 20px;text-align:center;background:var(--wine);color:#f8eadd}.footer .script{font-size:3.6rem;color:#f1d7ac}.footer p{font-size:.75rem;line-height:1.8;color:#ead4c9}.footer .ornament{margin:18px 0;color:#e3c38c}
 @media(max-width:650px){.hero{padding:24px 8px 34px}.ganesha{width:112px;height:112px;margin-bottom:0}.ganesha svg{width:96px;height:96px}.heart-wrap{min-height:700px;width:100%}.heart-inner{padding:165px 26px 125px;max-width:520px}.names{font-size:clamp(2.15rem,8.7vw,3.5rem)}.hero .eyebrow{font-size:.57rem;letter-spacing:.16em}.hero-sub{font-size:1.05rem;letter-spacing:.12em}.hero-date{font-size:.62rem;letter-spacing:.13em}.scroll{margin-top:22px}.section{padding:68px 18px}.event-grid{grid-template-columns:1fr;max-width:420px}.family-grid{grid-template-columns:1fr;gap:8px}.heart{margin:0}.gallery-grid{grid-template-columns:1fr 1fr}.photo-slot:last-child{display:none}}@media(max-width:380px){.heart-wrap{min-height:640px}.heart-inner{padding:150px 18px 110px}.names{font-size:2.05rem}.hero-date{letter-spacing:.08em}}
-</style></head>
+</style>
+<style id="mobile-compact-variant">
+/* Mobile-only refinement: desktop styling remains unchanged. */
+@media (max-width: 650px) {
+  .hero {
+    min-height: 100svh;
+    padding: 12px 7px 18px;
+  }
+  .hero-content { padding: 0 3px; }
+  .ganesha { width: 82px; height: 82px; margin: 0 auto -2px; }
+  .ganesha svg { width: 76px; height: 76px; }
+  .ganesha:before { inset: 7px; }
+  .heart-wrap {
+    width: min(100%, 510px);
+    min-height: 535px;
+    margin-top: -20px;
+  }
+  .heart-frame { inset: 0; }
+  .heart-inner {
+    width: 100%;
+    max-width: 420px;
+    padding: 118px 24px 82px;
+  }
+  .hero .eyebrow {
+    font-size: .48rem;
+    letter-spacing: .12em;
+    margin-bottom: 8px;
+  }
+  .names {
+    font-size: clamp(1.85rem, 7.6vw, 2.65rem);
+    line-height: 1;
+    margin-top: 7px;
+  }
+  .amp { font-size: .42em; margin: 0; }
+  .hero .divider { margin: 10px auto 7px; gap: 9px; }
+  .hero .divider:before, .hero .divider:after { width: 38px; }
+  .hero-sub { font-size: .86rem; letter-spacing: .09em; margin: 10px 0 6px; }
+  .hero-date { font-size: .52rem; letter-spacing: .09em; }
+  .scroll { margin-top: 10px; font-size: .49rem; letter-spacing: .14em; }
+  .scroll span { font-size: .9rem; margin-top: 2px; }
+
+  .section { padding: 40px 16px; }
+  .intro h2, .section h2 { font-size: clamp(1.9rem, 7vw, 2.6rem); margin: 8px 0; }
+  .intro p { font-size: .82rem; line-height: 1.65; margin: 12px auto; }
+  .couple-line { font-size: 1.3rem; }
+  .countdown { padding: 38px 14px; }
+  .countdown h2 { font-size: 2rem; margin: 8px 0 18px; }
+  .timer { gap: 12px 20px; }
+  .time-unit strong { font-size: 2.25rem; }
+  .time-unit span { font-size: .52rem; letter-spacing: .14em; }
+  .count-note { font-size: .68rem; margin-top: 15px; }
+  .event-grid { gap: 14px; margin-top: 24px; }
+  .event-card { padding: 22px 16px 18px; }
+  .event-icon { font-size: 1.4rem; }
+  .event-card h3 { font-size: 1.7rem; margin: 7px 0; }
+  .event-date { font-size: .65rem; letter-spacing: .09em; }
+  .event-time { font-size: 1.15rem; margin: 7px 0; }
+  .event-card p { font-size: .72rem; line-height: 1.5; margin: 8px 0 0; }
+  .family-grid { margin: 20px auto; gap: 4px; }
+  .family h3 { font-size: 1.35rem; margin: 8px 0 4px; }
+  .family p { font-size: .78rem; line-height: 1.55; margin: 6px 0; }
+  .heart { font-size: 1.5rem; }
+  .venue-name { font-size: 1.65rem; margin: 12px 0 7px; }
+  .venue-address { font-size: .78rem; line-height: 1.6; margin-bottom: 16px; }
+  .map-btn { padding: 10px 17px; font-size: .62rem; }
+  .footer { padding: 36px 16px; }
+  .footer .script { font-size: 2.45rem; }
+  .footer p { font-size: .68rem; line-height: 1.6; margin: 10px 0; }
+  .footer .ornament { margin: 10px 0; }
+  .divider { margin: 12px auto; }
+}
+@media (max-width: 390px) {
+  .heart-wrap { min-height: 495px; margin-top: -16px; }
+  .heart-inner { padding: 108px 17px 74px; }
+  .ganesha { width: 74px; height: 74px; }
+  .ganesha svg { width: 68px; height: 68px; }
+  .names { font-size: 1.78rem; }
+  .hero-sub { font-size: .78rem; }
+  .hero-date { font-size: .47rem; letter-spacing: .07em; }
+  .section { padding: 34px 14px; }
+  .countdown { padding: 32px 12px; }
+}
+@media (max-height: 740px) and (max-width: 650px) {
+  .hero { min-height: auto; padding-top: 8px; padding-bottom: 12px; }
+  .heart-wrap { min-height: 465px; }
+  .heart-inner { padding-top: 96px; padding-bottom: 68px; }
+  .ganesha { width: 66px; height: 66px; }
+  .ganesha svg { width: 62px; height: 62px; }
+  .scroll { margin-top: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ganesha, .ganesha:before, .halo-spin, .draw-path { animation: none !important; }
+}
+</style>
+
+
+<style id="mobile-tight-inline-layout">
+/* Tighter mobile rhythm and horizontal layouts; desktop remains untouched. */
+@media (max-width: 650px) {
+  .section { padding: 27px 12px; }
+  .section h2, .intro h2 { margin: 5px 0; }
+  .intro p { margin: 7px auto; line-height: 1.48; }
+  .intro .divider, .venue .divider { margin: 7px auto; }
+  .countdown { padding: 25px 10px; }
+  .countdown h2 { margin: 5px 0 10px; font-size: 1.75rem; }
+  .timer { display: flex; flex-wrap: nowrap; justify-content: space-evenly; gap: 5px; }
+  .time-unit { min-width: 0; flex: 1 1 0; }
+  .time-unit strong { font-size: clamp(1.55rem, 7vw, 2rem); line-height: 1; }
+  .time-unit span { font-size: .45rem; letter-spacing: .08em; }
+  .count-note { margin-top: 9px; }
+  .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 13px; }
+  .event-card { padding: 15px 8px 12px; min-width: 0; }
+  .event-icon { font-size: 1.05rem; }
+  .event-card h3 { font-size: 1.35rem; margin: 3px 0; }
+  .event-date { font-size: .52rem; line-height: 1.35; letter-spacing: .045em; }
+  .event-time { font-size: .98rem; margin: 5px 0; }
+  .event-card p { font-size: .61rem; line-height: 1.35; margin-top: 5px; }
+  .family-grid { grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: 7px; margin: 12px auto 4px; }
+  .family h3 { font-size: 1.12rem; line-height: 1.1; margin: 4px 0; white-space: nowrap; }
+  .family p { font-size: .67rem; line-height: 1.38; margin: 3px 0; }
+  .heart { font-size: 1.2rem; }
+  .venue-name { margin: 7px 0 4px; }
+  .venue-address { margin-bottom: 10px; line-height: 1.42; }
+  .gallery-grid { gap: 7px; margin: 12px auto; }
+  .footer { padding: 25px 12px; }
+  .footer .ornament { margin: 6px 0; }
+  .footer p { margin: 6px 0; line-height: 1.4; }
+  .divider { margin: 7px auto; }
+}
+@media (max-width: 390px) {
+  .section { padding: 23px 9px; }
+  .event-grid { gap: 6px; }
+  .event-card { padding: 13px 6px 10px; }
+  .event-date { font-size: .47rem; }
+  .event-card p { font-size: .57rem; }
+  .family-grid { gap: 4px; }
+  .family h3 { font-size: 1rem; }
+  .family p { font-size: .61rem; }
+}
+</style>
+
+
+<style id="mobile-extra-vertical-tightening">
+/* Extra compact mobile spacing; desktop styling is unchanged. */
+@media (max-width:650px) {
+  .hero { padding: 5px 6px 8px !important; }
+  .ganesha { width: 68px !important; height: 68px !important; margin-bottom: -5px !important; }
+  .ganesha svg { width: 66px !important; height: 66px !important; }
+  .heart-wrap { min-height: 440px !important; margin-top: -12px !important; }
+  .heart-inner { padding: 96px 22px 62px !important; }
+  .hero .eyebrow { margin-bottom: 4px !important; line-height: 1.2; }
+  .names { margin-top: 4px !important; line-height: .94 !important; }
+  .hero .divider { margin: 5px auto 3px !important; }
+  .hero-sub { margin: 5px 0 3px !important; line-height: 1.15; }
+  .hero-date { line-height: 1.2; }
+  .scroll { margin-top: 5px !important; }
+  .scroll span { margin-top: 0 !important; }
+  .section { padding: 17px 11px !important; }
+  .intro p { margin: 5px auto !important; line-height: 1.38 !important; }
+  .intro .couple-line { margin: 5px 0 0 !important; }
+  .countdown { padding: 17px 9px !important; }
+  .countdown h2 { margin: 3px 0 7px !important; line-height: 1.05; }
+  .time-unit strong { font-size: 1.65rem !important; line-height: 1; }
+  .time-unit span { font-size: .52rem !important; letter-spacing: .1em !important; }
+  .count-note { margin-top: 5px !important; line-height: 1.25; }
+  .events .divider, .family .divider, .venue .divider { margin: 4px auto !important; }
+  .event-grid { margin-top: 7px !important; gap: 6px !important; }
+  .event-card { padding: 10px 6px 8px !important; }
+  .event-icon { font-size: 1.15rem !important; line-height: 1; }
+  .event-card h3 { margin: 2px 0 !important; line-height: 1.05; }
+  .event-date { font-size: .53rem !important; letter-spacing: .04em !important; line-height: 1.25; }
+  .event-time { margin: 3px 0 !important; line-height: 1.1; }
+  .event-card p { margin: 3px 0 0 !important; line-height: 1.25 !important; }
+  .family-grid { margin: 7px auto 0 !important; gap: 4px !important; }
+  .family h3 { margin: 2px 0 !important; }
+  .family p { margin: 2px 0 !important; line-height: 1.25 !important; }
+  .family .heart { font-size: 1.4rem !important; }
+  .venue-name { margin: 4px 0 3px !important; line-height: 1.05; }
+  .venue-address { margin: 3px auto 7px !important; line-height: 1.3 !important; }
+  .map-btn { padding: 7px 12px !important; }
+  .footer { padding: 16px 10px !important; }
+  .footer .script { font-size: 2.3rem !important; line-height: 1.05; }
+  .footer .ornament { margin: 4px 0 !important; }
+  .footer p { margin: 4px 0 !important; line-height: 1.3 !important; }
+}
+@media (max-width:390px) {
+  .heart-wrap { min-height: 415px !important; }
+  .heart-inner { padding: 88px 17px 56px !important; }
+  .section { padding: 14px 8px !important; }
+  .event-card p { font-size: .56rem !important; }
+}
+</style>
+
+</head>
 <body>    
 
     <style>
@@ -432,10 +625,8 @@
     <section class="section intro"><div class="wrap"><p class="eyebrow">A beautiful beginning</p><h2 class="script">Two hearts, one forever</h2><div class="divider">❦</div><p>With immense joy and the love of our families, we invite you to celebrate the beginning of our forever. Your presence and blessings will make our special days even more meaningful.</p><p class="couple-line">Tejaswini V <span style="color:var(--gold)">♥</span> Abhishek G</p></div></section>
     <section class="countdown"><p class="eyebrow">The celebration begins in</p><h2>Counting down to our forever</h2><div class="timer" id="timer"><div class="time-unit"><strong id="days">--</strong><span>Days</span></div><div class="time-unit"><strong id="hours">--</strong><span>Hours</span></div><div class="time-unit"><strong id="minutes">--</strong><span>Minutes</span></div><div class="time-unit"><strong id="seconds">--</strong><span>Seconds</span></div></div><p class="count-note">Reception · December 2, 2026 at 7:00 PM (IST)</p></section>
     <section class="section events"><div class="wrap"><p class="eyebrow">Save the dates</p><h2>Wedding celebrations</h2><div class="divider">✧</div><div class="event-grid"><article class="event-card"><div class="event-icon">❀</div><h3>Reception</h3><div class="event-date">Wednesday · December 2, 2026</div><div class="event-time">7:00 PM onwards</div><p>An evening of joy, laughter, and togetherness.<br>We look forward to celebrating with you.</p></article><article class="event-card"><div class="event-icon">✧</div><h3>Muhurtham</h3><div class="event-date">Thursday · December 3, 2026</div><div class="event-time">9:30 AM – 10:50 AM</div><p>Join us as we begin our journey together<br>with the blessings of our loved ones.</p></article></div></div></section>
-    <section class="section family"><div class="wrap"><p class="eyebrow">Together with our families</p><h2>With love &amp; blessings</h2><div class="family-grid"><div><h3>Abhishek G</h3><p>Son of<br><strong>Smt. Triveni</strong><br>&amp; <strong>Sri Gangadhar</strong></p></div><div class="heart">♥</div><div><h3>Tejaswini V</h3><p>Daughter of<br><strong>Smt. Umadevi K.V.</strong><br>&amp; <strong>Sri Venkatesh R.</strong></p></div></div></div></section>
+    <section class="section family"><div class="wrap"><h2>With love &amp; blessings</h2><div class="family-grid"><div><h3>Abhishek G</h3><p>Son of<br><strong>Smt. Triveni</strong><br>&amp; <strong>Sri Gangadhar</strong></p></div><div class="heart">♥</div><div><h3>Tejaswini V</h3><p>Daughter of<br><strong>Smt. Umadevi K.V.</strong><br>&amp; <strong>Sri Venkatesh R.</strong></p></div></div></div></section>
     <section class="section venue"><div class="wrap"><p class="eyebrow">We would love to see you there</p><h2>Venue</h2><div class="divider">❦</div><div class="venue-name">G M Convention Hall</div><p class="venue-address">#79, Railway Layout 2nd Stage,<br>Near Ullal RTO, Ullal Main Road,<br>Bengaluru – 560056</p><a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=G+M+Convention+Hall+%2379+Railway+Layout+2nd+Stage+Near+Ullal+RTO+Ullal+Main+Road+Bengaluru+560056">Open in Google Maps ↗</a></div></section>
-
-    <footer class="footer"><div class="script">Tejaswini <span class="initial">V</span> &amp; Abhishek <span class="initial">G</span></div><div class="ornament">✧ ❦ ✧</div><p>With love, we invite you to share in our joy.<br>Your presence, wishes, and blessings mean the world to us.</p><p>DECEMBER 2 &amp; 3, 2026 · BENGALURU</p></footer>
     <script>
         const target = new Date('2026-12-02T19:00:00+05:30').getTime(); function tick() { let diff = target - Date.now(); if (diff < 0) diff = 0; const d = Math.floor(diff / 86400000), h = Math.floor(diff % 86400000 / 3600000), m = Math.floor(diff % 3600000 / 60000), s = Math.floor(diff % 60000 / 1000); document.getElementById('days').textContent = d; document.getElementById('hours').textContent = String(h).padStart(2, '0'); document.getElementById('minutes').textContent = String(m).padStart(2, '0'); document.getElementById('seconds').textContent = String(s).padStart(2, '0') } tick(); setInterval(tick, 1000);
     </script>
